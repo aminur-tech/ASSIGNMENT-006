@@ -10,6 +10,9 @@
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+    <!-- font awesome -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- style.css -->
     <link rel="stylesheet" href="style.css">
 
@@ -18,7 +21,7 @@
 
 <body>
     <!-- navbar  -->
-    <div class="navbar bg-[#15803D] shadow-sm text-white">
+    <div class="navbar bg-[#15803D] shadow-sm text-white sticky top-0 z-50">
         <div class="navbar-start">
             <!-- Mobile Dropdown -->
             <div class="dropdown">
@@ -85,42 +88,60 @@
         </div>
     </div>
 
+
     <!--  Functionalities -->
     <section class="grid grid-cols-[15%_70%_15%] p-8 bg-[#F0FFF4] gap-4">
+        <!-- left site -->
         <div>
-            <h2 class="text-xl font-bold">Categories</h2>
+            <h2 class="text-xl font-bold mb-2">Categories</h2>
             <div id="categories-container" class="space-y-2"></div>
         </div>
 
+        <!-- center -->
         <div>
+            <!-- add spinner -->
+            <div id="spinner" class="flex justify-center items-center p-10 hidden">
+                <span class="loading loading-spinner loading-xl"></span>
+            </div>
+
             <div id="plants-container" class="grid grid-cols-3 gap-4"></div>
         </div>
-
-        <div class="">
-            <h1>Your Cart</h1>
+        <!-- right site -->
+        <div>
+            <div class="">
+                <h1 class="text-xl font-bold mb-2">Your Cart</h1>
+                <ul id="cart-container" class="space-y-2"></ul> <span class="text-gray-400"><hr></span>
+               <div class="flex justify-between items-center p-2 mr-3">
+                 <p class=" font-semibold text-xl">Total:</p> 
+                 <p>৳<span id="total-price">0</span></p>
+               </div>
+            </div>
         </div>
     </section>
 
+    <!-- modal -->
+      <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box">
+            <div id="modal-content"></div>
 
-
-
-
+        </div>
+    </dialog>
 
 
 
     <!-- About the Campaign -->
-    <div class="mt-20 px-6">
+    <div class="mt-20 ]">
         <h2 class="text-center text-2xl font-semibold mb-3">About the Campaign</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 items-center gap-2 bg-[#F0FFF4] p-8 rounded-2xl">
-            <div class="flex justify-center">
+        <div class="flex items-center justify-center gap-4 p-6">
+            <div>
                 <img src="./assets/about.png" alt="About Green Earth" class="rounded-lg shadow-md w-full max-w-sm">
             </div>
 
             <div class="space-y-4">
                 <p class="text-gray-700 leading-relaxed">
-                    Green Earth is a global tree plantation initiative dedicated to fighting climate change.
-                    Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign,
+                    Green Earth is a global tree plantation initiative dedicated to fighting climate change. <br>
+                    Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign,<br>
                     you help restore forests, create habitats for wildlife, and combat global warming.
                 </p>
 
@@ -190,6 +211,7 @@
 
 
     <script src="index.js"></script>
+    <!-- <script src="test.js"></script> -->
 </body>
 
 </html>
