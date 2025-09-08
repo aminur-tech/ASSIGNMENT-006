@@ -16,6 +16,8 @@
     <!-- style.css -->
     <link rel="stylesheet" href="style.css">
 
+    <link rel="shortcut icon" href="./assets/favicon.png" type="image/x-icon">
+
 
 </head>
 
@@ -90,7 +92,7 @@
 
 
     <!--  Functionalities -->
-    <section class="grid grid-cols-[15%_70%_15%] p-8 bg-[#F0FFF4] gap-4">
+    <section class="grid grid-cols-1 md:grid-cols-[15%_70%_15%] p-4 md:p-8 bg-[#F0FFF4] gap-4">
         <!-- left site -->
         <div>
             <h2 class="text-xl font-bold mb-2">Categories</h2>
@@ -104,7 +106,7 @@
                 <span class="loading loading-spinner loading-xl"></span>
             </div>
 
-            <div id="plants-container" class="grid grid-cols-3 gap-4"></div>
+            <div id="plants-container" class="grid grid-cols-1 md:grid-cols-3 gap-4"></div>
         </div>
         <!-- right site -->
         <div>
@@ -133,12 +135,12 @@
     <div class="mt-20 ]">
         <h2 class="text-center text-2xl font-semibold mb-3">About the Campaign</h2>
 
-        <div class="flex items-center justify-center gap-4 p-6">
+        <div  class="flex flex-col md:flex-row items-center justify-center gap-6 p-6">
             <div>
                 <img src="./assets/about.png" alt="About Green Earth" class="rounded-lg shadow-md w-full max-w-sm">
             </div>
 
-            <div class="space-y-4">
+            <div class="space-y-4 text-left">
                 <p class="text-gray-700 leading-relaxed">
                     Green Earth is a global tree plantation initiative dedicated to fighting climate change. <br>
                     Since our start, we’ve planted over 500,000 trees worldwide. By joining our campaign,<br>
