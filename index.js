@@ -102,10 +102,10 @@ const displayPlants = (plants) => {
         // console.log(plant)
         const div = document.createElement("div")
         div.innerHTML = `<div class=" bg-white rounded-2xl shadow p-4">
-                    <!-- Image -->
-                    <div class="w-full h-40 bg-gray-200 rounded-xl flex items-center justify-center">
-                        <span>${plant.image}</span>
-                    </div>
+                  <!-- Image -->
+                   <div class="w-full h-40 bg-gray-200 rounded-xl flex items-center justify-center overflow-hidden">
+                    <img src="${plant.image}" alt="" class="w-full h-full object-cover rounded-xl">
+                      </div>
 
                     <!-- Title & Description -->
                     <h2 class="text-lg font-bold mt-3">${plant.name}</h2>
@@ -150,9 +150,9 @@ const openModal = (plant) => {
     modalContent.innerHTML = `
         <div class="">
             <h2 class="text-2xl font-bold mb-2">${plant.name}</h2>
-            <div class="w-full h-40 bg-gray-200 rounded-xl flex items-center justify-center mb-4">
-            <span>${plant.image}</span>
-            </div>
+             <div class="w-full h-40 bg-gray-200 rounded-xl flex items-center justify-center overflow-hidden">
+              <img src="${plant.image}" alt="" class="w-full h-full object-cover rounded-xl">
+             </div>
             
             <div class = "space-y-2">
             <p><span class = "font-bold">Category :</span> ${plant.category}</p>
